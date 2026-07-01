@@ -9,6 +9,7 @@ def calculate_percentage(mark1,mark2,mark3,mark4,mark5):
     total=mark1+mark2+mark3+mark4+mark5
     percentage=(total/5)
     print(f'Percentage: {percentage}%')
+    return percentage
 def find_grade(percentage):
     if percentage>=90:
         print('Grade: A')
@@ -61,9 +62,9 @@ def student_management():
     display_student(stud_id,stu_name)
     calculate_total(marks)
     calculate_percentage(marks)
-    total=mark1+mark2+mark3+mark4+mark5
-    percentage=(total/5)
-    find_grade(percentage)
+    # total=mark1+mark2+mark3+mark4+mark5
+    # percentage=(total/5)
+    find_grade(calculate_percentage())
     highest_mark(marks)
     lowest_mark(marks)
     pass_fail(marks)
